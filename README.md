@@ -25,11 +25,12 @@ qwen/
 ├── remediation.py   # Auto-remediation module
 ├── requirements.txt # Python dependencies
 ├── README.md        # This file
+├── .gitignore       # Git ignore file
 ├── sample_logs/     # Sample log files for testing
 │   ├── normal_logs.log
 │   └── malicious_logs.log
-└── models/          # Trained ML models
-    └── ml_detector_model.pkl
+└── models/          # Trained ML models (directory will be created after training)
+    └── ml_detector_model.pkl  # ML model file (generated after training)
 ```
 
 ## Dependencies
@@ -56,7 +57,7 @@ Before using the system, you need to train the machine learning model:
 python main.py --train
 ```
 
-This will train the model using the sample logs in the `sample_logs` directory.
+This will train the model using the sample logs in the `sample_logs` directory. The trained model will be saved in the `models/` directory.
 
 ### CLI Interface
 
@@ -96,3 +97,9 @@ curl -X POST http://localhost:5000/detect -H "Content-Type: application/json" -d
   "masked_content": "[2023-05-15 10:30:00] ERROR: 192.168.1.100 - \"SELECT * FROM users WHERE email='***'\" - HIGH"
 }
 ```
+
+## Notes
+
+- The `.gitignore` file excludes unnecessary files like Python bytecode (.pyc) files and virtual environments
+- The ML model file (`ml_detector_model.pkl`) is not included in the repository and will be generated after training
+- Make sure to run the training command before using the system for the first time
