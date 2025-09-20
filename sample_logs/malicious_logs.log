@@ -1,0 +1,10 @@
+[2023-05-15 11:30:00] ERROR: 192.168.1.100 - "SELECT * FROM users WHERE id = 1" - HIGH
+[2023-05-15 11:31:15] CRITICAL: 10.0.0.50 - "DROP TABLE users" - HIGH
+{"timestamp": "2023-05-15 11:32:30", "ip": "172.16.0.25", "message": "<script>alert('XSS')</script>", "level": "ERROR"}
+[2023-05-15 11:33:45] WARNING: 192.168.2.75 - "SELECT password FROM admin_users" - HIGH
+[2023-05-15 11:35:00] ERROR: 200.100.50.25 - "'; DROP TABLE products; --" - CRITICAL
+{"timestamp": "2023-05-15 11:36:15", "ip": "10.10.10.10", "message": "UNION SELECT username, password FROM admin_users", "level": "CRITICAL"}
+[2023-05-15 11:37:30] ERROR: 192.168.3.100 - "<img src=x onerror=alert('XSS')>" - HIGH
+[2023-05-15 11:38:45] CRITICAL: 172.16.1.200 - "DELETE FROM logs WHERE timestamp > '2023-01-01'" - HIGH
+[2023-05-15 11:40:00] ERROR: 10.0.1.50 - "OR 1=1 --" - HIGH
+[2023-05-15 11:41:15] WARNING: 192.168.4.75 - "admin'--" - HIGH

@@ -1,0 +1,10 @@
+[2023-05-15 10:30:00] INFO: 192.168.1.10 - "GET /api/users" - LOW
+[2023-05-15 10:31:15] INFO: 192.168.1.15 - "POST /api/login" - LOW
+{"timestamp": "2023-05-15 10:32:30", "ip": "192.168.1.20", "message": "User john.doe@example.com logged in", "level": "INFO"}
+[2023-05-15 10:33:45] DEBUG: 192.168.1.25 - "Database connection established" - LOW
+[2023-05-15 10:35:00] INFO: 192.168.1.30 - "GET /api/products" - LOW
+{"timestamp": "2023-05-15 10:36:15", "ip": "192.168.1.35", "message": "User jane.smith@example.com accessed product list", "level": "INFO"}
+[2023-05-15 10:37:30] INFO: 192.168.1.40 - "GET /api/orders" - LOW
+[2023-05-15 10:38:45] INFO: 192.168.1.45 - "User updated profile with phone 13800138000" - LOW
+Normal application log entry
+[2023-05-15 10:40:00] INFO: 192.168.1.50 - "GET /api/profile" - LOW
